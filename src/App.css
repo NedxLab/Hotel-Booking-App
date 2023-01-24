@@ -11,7 +11,7 @@
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
-  --mainSpacing: 3px;
+  --mainSpacing: 1.6px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
@@ -412,6 +412,7 @@ a {
   width: 100%;
   display: block;
   transition: var(--mainTransition);
+  aspect-ratio: 1.5;
 }
 .price-top {
   position: absolute;
@@ -451,11 +452,9 @@ a {
   transform: translate(-50%, -50%) scale(1);
 }
 .room-info {
-  background: var(--darkGrey);
   text-transform: capitalize;
-  padding: 0.5rem 0;
-  text-align: center;
-  font-weight: 700;
+  padding: 1.5rem 0;
+
   letter-spacing: var(--mainSpacing);
 }
 /* end of room  */

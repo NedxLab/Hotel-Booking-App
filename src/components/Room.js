@@ -4,7 +4,7 @@ import defaultImage from "../images/details-1.jpeg";
 import PropTypes from "prop-types";
 
 export default function Room({ room }) {
-  const { name, slug, price, images } = room;
+  const { name, slug, price, images, description, type, extras } = room;
   return (
     <article className="room">
       <div className="img-container">
@@ -17,7 +17,11 @@ export default function Room({ room }) {
           Features
         </Link>
       </div>
-      <p className="room-info">{name}</p>
+      <p className="room-info">
+        Name: {name} <br />
+        Grade: {type} <br />
+        Description: {extras}
+      </p>
     </article>
   );
 }
