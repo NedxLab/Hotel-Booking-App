@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryColor: #af9a7d;
+  --primaryColor: #009688;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
@@ -20,8 +20,11 @@ body {
   padding-top: 66px;
   color: var(--mainBlack);
   background: var(--mainWhite);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.4;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 h1 {
   font-size: 3em;
@@ -50,9 +53,10 @@ h5 {
 h6 {
   font-size: 1em;
   font-weight: bold;
-  margin-bottom: 1.5em;
 }
-
+a {
+  color: #4b5f4b;
+}
 .btn-primary {
   display: inline-block;
   text-decoration: none;
@@ -135,6 +139,10 @@ h6 {
 .show-nav {
   height: 100px;
 }
+.logo img {
+  height: 40px;
+  width: 150px;
+}
 @media screen and (min-width: 768px) {
   .nav-btn {
     display: none;
@@ -154,12 +162,13 @@ h6 {
     padding: 0.5rem 0;
   }
 }
+
 /* end of navbar */
 /* Hero */
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  background: url("./images/defaultBcg.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,6 +179,65 @@ h6 {
 }
 /* End of Hero */
 /* Banner */
+.herobanner {
+  width: 80vw;
+  height: 55vh;
+  min-height: 55vh;
+}
+.itemsbanner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1.3rem 0.8rem;
+  margin: 0;
+}
+.itemsbanner > div {
+  width: 50%;
+  max-width: 50%;
+  height: 100%;
+}
+.bannertext {
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #222222d4;
+}
+.bannerimage img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+.bannertext h1 {
+  font-size: 1.2rem;
+}
+.bannertext h5 {
+  font-size: 0.79rem;
+  font-weight: 100;
+}
+.bannertext h3 {
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+.bannertext a {
+  padding: 1rem 1.5rem;
+  border-bottom: 1.5px solid #034603;
+  border-top: 1.5px solid #034603;
+  border-left: none;
+  border-right: none;
+  background: none;
+  text-transform: uppercase;
+  font-size: 0.83rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: #034603;
+}
 .banner {
   display: inline-block;
   background: rgba(0, 0, 0, 0.5);
@@ -198,6 +266,18 @@ h6 {
   }
   .banner h1 {
     font-size: 3rem;
+  }
+}
+@media screen and (max-width: 668px) {
+  .itemsbanner {
+    flex-direction: column;
+  }
+  .herobanner {
+    height: 100%;
+  }
+  .itemsbanner > div {
+    width: 80%;
+    max-width: 80%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -248,14 +328,34 @@ h6 {
   display: inline-block;
   color: var(--primaryColor);
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
 }
 .services h6 {
-  letter-spacing: var(--mainSpacing);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 0;
 }
 .services p {
   width: 80%;
   margin: 0 auto;
+}
+.services-center {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+}
+.service {
+  width: 100%;
+  height: 100%;
+}
+.services img {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1.5;
 }
 @media screen and (min-width: 992px) {
   .services-center {
@@ -511,3 +611,75 @@ h6 {
   }
 }
 /* end of rooms fitler*/
+.footer {
+  width: 97vw;
+  height: 100%;
+  overflow: hidden;
+}
+.footercontent {
+  display: flex;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+.footertext {
+  width: 60vw;
+  height: 100%;
+  border-right: 1.5px solid #034603;
+}
+.footerprops {
+  width: 40vw;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footericons {
+  width: 65%;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerinfo {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.footertitle {
+  border-bottom: 1.2px solid #034603;
+  padding: 1.7rem 0 0.2rem 0;
+  margin-bottom: 1.5rem;
+  width: 90%;
+}
+.footerbase,
+.footerlinks,
+.footerwriteup {
+  padding: 1rem 0;
+}
+.footerbase h5 {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 780px) {
+  .footercontent {
+    flex-direction: column;
+  }
+  .footertext {
+    width: 100%;
+    border-right: none;
+  }
+  .footerprops {
+    width: 100%;
+  }
+  .footericons {
+    width: 100%;
+  }
+  .footerprops img {
+    width: 70%;
+  }
+}

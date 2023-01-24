@@ -7,6 +7,7 @@ import SingleRoom from "./pages/SingleRoom";
 import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
 import { useLocation } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   var location = useLocation();
@@ -21,6 +22,7 @@ function App() {
         <Route path="/rooms/:slug" element={<SingleRoom slug={slug} />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </>
   );
 }

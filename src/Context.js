@@ -42,7 +42,6 @@ class RoomProvider extends Component {
     } catch (err) {
       console.log(err);
     }
-    console.log(items);
   };
   componentDidMount() {
     this.getData();
