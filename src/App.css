@@ -464,13 +464,16 @@ a {
 .single-room-images {
   width: 80vw;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   grid-row-gap: 2rem;
   grid-column-gap: 50px;
+  justify-content: center;
+  align-items: center;
 }
 .single-room-images img {
-  width: 100%;
+  width: 25rem;
+  height: 17rem;
   display: block;
 }
 .single-room-info {
